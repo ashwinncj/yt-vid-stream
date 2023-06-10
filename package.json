@@ -1,0 +1,30 @@
+{
+  "name": "yt-vid-stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron-start": "electron .",
+    "build:renderer": "webpack --config webpack.renderer.config.js",
+    "build:main": "webpack --config webpack.main.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwinncj/yt-vid-stream.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashwinncj/yt-vid-stream/issues"
+  },
+  "homepage": "https://github.com/ashwinncj/yt-vid-stream#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "babel-loader": "^9.1.2",
+    "electron": "^25.1.0",
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
