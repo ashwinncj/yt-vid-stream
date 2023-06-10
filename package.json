@@ -1,30 +1,60 @@
 {
   "name": "yt-vid-stream",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "private": true,
   "main": "main.js",
+  "homepage": "./",
+  "description": "Test App",
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "electron-start": "electron .",
-    "build:renderer": "webpack --config webpack.renderer.config.js",
-    "build:main": "webpack --config webpack.main.config.js"
+    "electron-build": "electron-builder",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ashwinncj/yt-vid-stream.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ashwinncj/yt-vid-stream/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/ashwinncj/yt-vid-stream#readme",
   "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
-    "babel-loader": "^9.1.2",
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
     "electron": "^25.1.0",
-    "webpack": "^5.86.0",
-    "webpack-cli": "^5.1.4"
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "files": [
+      "build/**/*",
+      "renderer.js"
+    ]
   }
 }
